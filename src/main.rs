@@ -18,7 +18,7 @@ fn main() -> io::Result<()> {
         if wrotebytes % (188 * 500) < 188 {
             wrotebytes = wrotebytes + write_stream_metadata(&mut pat_cc)?;
         }
-        wrotebytes = wrotebytes + write_packet(&mut cc, &buf[..count])?;
+        wrotebytes = wrotebytes + write_packet(&mut cc, &buf)?;
 
         count = fill_payload(&mut buf)?;
         readbytes = readbytes + count;
