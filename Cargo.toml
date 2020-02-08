@@ -8,3 +8,4 @@ edition = "2018"
 
 [dependencies]
 tsutil= { git = "https://github.com/superflaco/tsutil" }
+clap="2.33"
